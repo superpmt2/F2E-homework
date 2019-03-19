@@ -19,6 +19,7 @@ a {
 	background-color: #000;
 	color: #ea9b5a;
 	box-sizing: border-box;
+	margin-top: 20px;
 }
 
 .font-subtitle{
@@ -62,6 +63,12 @@ a {
 	position: fixed;
 	bottom: 100px;
 	right: 20px;
+}
+
+.logo {
+	width: 40px;
+	margin: 0 auto;
+	padding: 20px;
 }
 
 section {
