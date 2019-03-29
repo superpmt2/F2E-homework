@@ -85,28 +85,25 @@ a {
 	padding-top: 80px;
 	background-image: url(../img/header-bg.png);
 	background-size: cover;
-
 	position: relative; /*讓物件置中的解法2*/
 }
 
 .article-header {
 	font-size: 2.25rem;
 	font-weight: bold;
-	/*margin-top: 60px;*/
 	width: 100%;
-	/*margin: 60px 0;*/
-	/*border: 3px solid rgb(45,45,45,0.9);*/
-	padding: 20px 60px;
-	/*background-color: #f7f7f7;*/
-	color: #000;
+	padding: 60px;
+	background-color: rgba(0,0,0,0.6); 
+	color: #fff;
 	box-sizing: border-box;
 	/*margin-top: calc(140px - 100px);*/ /*通常使用calc，通常會一個用%，一個用px來計算*/
+	overflow: hidden;
 
 	position: absolute; /*讓物件置中的解法2*/
 	top: 0;
 	bottom: 0;
 	margin: auto;
-	height: 200px; /*重點不是多少px，重點是要設定高，才會幫我置中*/
+	height: 300px; /*重點不是多少px，重點是要設定高，才會幫我置中*/
 
 }
 
@@ -114,15 +111,19 @@ h2 {
 	margin: 0px;
 }
 
-.font-subtitle{
+.biography{
+	max-width: 960px;
+	margin: auto;
+}
+
+
+.font-title{
 	text-align: center;
-}
-
-.subtitle1{
 	font-size: 24px;
+	margin: 40px;
 }
 
-.subtitle2{
+.font-title-ch{
 	font-size: 1.2em;
 }
 
