@@ -83,13 +83,15 @@ a {
 	width: 100%;
 	height: 400px;
 	padding-top: 80px;
-	background-image: url(../img/header-bg.png);
-	background-size: cover;
+	/*background-image: url(../img/stevejobs.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;*/
 	position: relative; /*讓物件置中的解法2*/
 }
 
 .article-header {
-	font-size: 2.25rem;
+	font-size: 2em;
 	font-weight: bold;
 	width: 100%;
 	padding: 60px;
@@ -129,7 +131,9 @@ h2 {
 
 
 .pic-box {
+	max-width: 960px;
 	height: 200px;
+	margin: auto;
 }
 
 .pic {
@@ -146,6 +150,7 @@ section {
 	margin-bottom: 40px;
 	line-height: 26px;
 	letter-spacing: 1px;
+	vertical-align: top;
 }
 
 img {
@@ -155,6 +160,20 @@ img {
 	 /*height: 200px;*/
 	display: block;
 	object-fit: contain;
+}
+
+.content-pic-right, .side-pic {
+	width: 300px;
+	float: right;
+	margin-right: 20px;
+	margin-bottom: 10px;
+}
+
+.content-pic-left {
+	width: 300px;
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 10px;
 }
 
 .reference {
