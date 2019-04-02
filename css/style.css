@@ -172,7 +172,14 @@ img {
 .content-pic-left {
 	width: 300px;
 	float: left;
-	margin-right: 20px;
+	margin-left: 20px;
+	margin-bottom: 10px;
+}
+
+.side-pic {
+	width: 300px;
+	float: right;
+	margin-left: 20px;
 	margin-bottom: 10px;
 }
 
@@ -181,5 +188,21 @@ img {
 	color: #0070c9;
 }
 
+.footer {
+	width: 100%;
+	/*height: 50px;*/
+	background-color: #000; 
+	margin-top: 50px;
+	/*position: fixed;*/
+	bottom: 0;
+}
+
+.text {
+	width: 100%;
+	padding: 30px;
+	text-align: center;
+	box-sizing: border-box; /*也可以直接下在 * {box-sizing: border-box;}，雖然不要常用，但這是非戰之罪，因為這是很好資源的tag*/
+							/*需要這個屬性，這樣東西才不會爆出去，會在設定的div裡面*/
+}
 
 
