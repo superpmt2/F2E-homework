@@ -234,4 +234,20 @@ img {
 							/*需要這個屬性，這樣東西才不會爆出去，會在設定的div裡面*/
 }
 
+article {
+	max-width: 960px;
+	margin: auto;
+}
 
+.wrapper-article {
+	
+}
+
+.article-left {
+	width: 50%;
+}
+
+.landing-pic {
+	width: 200px;
+	float: left;
+}
