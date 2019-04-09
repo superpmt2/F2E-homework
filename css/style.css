@@ -106,6 +106,7 @@ a {
 	background-repeat: no-repeat;
 	background-position: center;*/
 	position: relative; /*讓物件置中的解法2*/
+	margin-bottom: 50px;
 }
 
 .article-header {
