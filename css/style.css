@@ -168,6 +168,7 @@ section {
 	letter-spacing: 1px;
 	vertical-align: top;
 	text-align: justify;
+	font-size: 16px;
 }
 
 img {
@@ -244,7 +245,7 @@ article {
 }
 
 .wrapper-article {
-	
+	font-size: 16px;
 }
 
 .article {
@@ -269,6 +270,7 @@ article {
 		/*padding: 10px; 若要在此設定間距，請設定Padding，若用Margin，就會造成有些區塊被推出去，變成奇怪的版型*/
 		box-sizing: border-box;
 		margin-bottom: 20px;
+		font-size: 0.8em;
 	}
 
 	.wrapper-article {
@@ -281,5 +283,13 @@ article {
 		margin-bottom: 10px;
 		box-sizing: border-box;
 	}
+
+	h2 {
+		color: red;
+	}
 	
+}
+
+h2 {
+	font-size: 24px;
 }
