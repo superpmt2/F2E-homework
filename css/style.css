@@ -26,9 +26,16 @@ a {
 	margin:auto;
 }
 
-.arrange-icons-box {}
-
-.arrange-icons {}
+.arrange-icons {
+	width: 80px;
+	height: 120px; /*這裡的高度要設定成需陣列的範圍，不然圖型無法陣列顯示*/
+	background-image: url(../img/logo-Behance.jpeg);
+	background-repeat: repeat-y;
+	background-size: 40px; /*這裡要改設定成數字，是因為我要讓背景沿著y軸陣列，若設定contain或cover，則會變成撐滿背景整個區塊*/
+	position: absolute;
+	z-index: 99;
+	margin: 10px;
+}
 
 .logo-float{
 	width: 80px;
