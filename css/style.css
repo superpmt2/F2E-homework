@@ -248,10 +248,19 @@ article {
 	color:pink;
 }
 
+.banner {
+	overflow: hidden; /*在此加“overflow: hidden”，才不會讓整張圖有動畫效果，而是在我們設定的框框內產生效果，不然有可能會動到整個版面*/
+}
+
 .banner img {
 	width: 100%;
 	height: 450px;
 	object-fit: cover;
+	transition:all 6s; /*過場效果可以寫在這層，因為若寫在下面的Hover裡面，當你滑鼠離開後，效果馬上中斷，就變成說你離開該區塊，他要變回第一幀是用跳的過去*/
+}
+
+.banner img:hover {
+	transform:scale(1.5);
 }
 
 .wrapper-article {
