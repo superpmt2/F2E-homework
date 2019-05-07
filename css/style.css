@@ -37,7 +37,7 @@ a {
 	margin: 10px;
 }
 
-.logo-float{
+.logo-float-wrap {
 	width: 80px;
 	position: fixed;
 	bottom: 100px;
@@ -48,12 +48,49 @@ a {
 	或者可以試著在網頁上，用滑鼠滾輪調整想要的位置，直接看是多少px*/
 }
 
+.logo-float-wrap-2 {
+	width: 80px;
+	position: fixed;
+	bottom: 180px;
+	right: calc(50% - 460px);
+	transform: translateY(-60px);
+	animation-name: rotate-self;
+	animation-duration: 2s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite; 
+	
+	/*left: calc(50% + 480px - 80px - 20px);*/
+	/*若將浮水印推回來的時候，還是超過原本設定的匡(960)，那浮水印還是會無法跟著螢幕亂跑，所以記得“-”的數字要讓浮水印在960裡，
+	或者可以試著在網頁上，用滑鼠滾輪調整想要的位置，直接看是多少px*/
+}
+
+@keyframes rotate-self {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: translateY(-50px) rotate(180deg) scale(0.1);
+	}
+}
+
+.logo-float {
+	transition: all 0.1s;
+}
+
 .logo-float:hover {
 	transform: scale(1.2) translateX(30px) rotate(30deg);
 }
 
 @media screen and (max-width: 960px) /*and (min-width: 768px)*/ {
-	.logo-float{
+	.logo-float-wrap {
+		right: 20px;
+		/*left: calc(50% + 480px - 80px - 20px);*/
+		/*通常都寫在目標下方即可*/
+		/*因為螢幕小於960了，所以浮水印就會消失，這時要針對浮水印在小於960的時候，會如何呈現，給予命令*/
+	}
+
+	.logo-float-wrap-2 {
 		right: 20px;
 		/*left: calc(50% + 480px - 80px - 20px);*/
 		/*通常都寫在目標下方即可*/
