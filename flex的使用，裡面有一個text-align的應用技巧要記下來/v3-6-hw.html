@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>v3-6</title>
+</head>
+<style>
+	*{
+		box-sizing: border-box;
+	}
+	html{
+		font-family:  "Microsoft JhengHei", sans-serif,Arial;
+	}
+	body {
+		margin: 0;
+		background-color:#fffad0;
+	}
+	h2{
+		font-size: 24px;
+		padding: 1%
+	}
+	p{
+		line-height: 1.5;
+		font-size: 16px;
+		margin: 0;
+		text-align: center; 
+	}
+
+	.app_icon__container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		width: 100%;
+		padding: 20px;
+	}
+
+	.app_icon__item {
+		text-align: center; /*圖片、a、span、p（裡面的文字），這些都是inline屬性，所以會被text-align影響，這邊就不用用到flex工具了*/
+
+		/*display: flex;*/
+		/*flex-direction: column;
+		justify-content: center;
+		align-items: center;*/
+		/*text-align: center;*/
+
+		width: 23%;
+		margin-bottom: 20px;
+	}
+
+	@media screen and (max-width: 768px) {
+		.app_icon__item {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: 35%; /*若要讓物件往下掉，只要調整寬度，就會將不足的物件往下擠壓*/
+			margin-bottom: 20px;
+		}
+		
+	}
+
+
+</style>
+<body>
+	<div class="app_icon__container">
+		<div class="app_icon__item item01">
+			<img src="app_icon/icon01.png">
+			<p>送1,000</p>	
+		</div>
+		<div class="app_icon__item item02">
+			<img src="app_icon/icon02.png">
+			<p>回饋10%</p>	
+		</div>
+		<div class="app_icon__item item03">
+			<img src="app_icon/icon03.png">
+			<p>抽溫泉券</p>	
+		</div>
+		<div class="app_icon__item item04">
+			<img src="app_icon/icon04.png">
+			<p>下降7折</p>	
+		</div>
+		<div class="app_icon__item item05">
+			<img src="app_icon/icon05.png">
+			<p>國際美妝</p>	
+		</div>
+		<div class="app_icon__item item06">
+			<img src="app_icon/icon06.png">
+			<p>保健限時</p>	
+		</div>
+		<div class="app_icon__item item07">
+			<img src="app_icon/icon07.png">
+			<p>送東森幣</p>	
+		</div>
+		<div class="app_icon__item item08">
+			<img src="app_icon/icon08.png">
+			<p>打卡遊戲</p>	
+		</div>
+	</div>
+</body>
+</html>
