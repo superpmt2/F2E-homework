@@ -55,8 +55,36 @@ table {
     margin: auto;
     max-width: 960px;
     text-align: center;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 414px) {
+    table {
+        width: 100%;
+    }
 }
 
 .subtitle {
     background-color: #faead7;
+}
+
+p {
+    font-weight: bold;
+}
+
+td {
+    padding: 15px 10px;
+    white-space: nowrap;
+}
+
+.subtitle td {
+    padding: 2px;
+}
+
+thead td {
+    padding: 2px;
+}
+
+.f-s {
+    font-size: 14px;
 }
