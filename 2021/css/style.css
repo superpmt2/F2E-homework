@@ -85,6 +85,131 @@ thead td {
     padding: 2px;
 }
 
+.card {
+    color: #271f1f;
+    width: 90%;
+    max-width: 960px;
+    margin: auto;
+    padding: 12px;
+    border-radius: 6px;
+    box-shadow: 0 2px 12px 0 rgba(146, 129, 129, 0.5);
+    background-color: #ffffff;
+    /* font-family: NotoSansCJKtc; */
+}
+
+.card-body > h2 {
+    border-bottom: 1px solid #d70036;
+    margin: 0px 0px 12px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.card-body > h2 > a {
+    margin-bottom: 8px;
+    display: block;
+}
+
+.card-body > form > label {
+    display: block;
+}
+
+.card-body > form > select, input {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 4px 0 0;
+    padding: 8px 156px 8px 12px;
+    border-radius: 6px;
+    border: solid 1px #ededf5;
+    background-color: #ffffff;
+    font-size: 16px;
+}
+
+.form-select {
+    background-color: #fff;
+    background-image: url(/2021/img/icon-normal-more.svg);
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    /* background-size: 16px 12px; */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.card-body > .form-check > input {
+    width: 16px;
+    height: 16px;
+    margin: 0px 4px 0px 0px;
+}
+
+a {
+    text-decoration: none;
+    color: initial;
+}
+
+.card-body > p {
+    font-weight: bold;
+    text-align: center;
+}
+
+.card-body > p > a {
+    color: #d70036;
+}
+
+.verification input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.verification > img {
+    width: 100px;
+    margin-top: 12px;
+    -webkit-appearance: none;
+    }
+}
+
 .f-s {
     font-size: 14px;
+}
+
+button {
+    width: 100%;
+    margin: 16px 0;
+    padding: 5px 12px;
+    border-radius: 17px;
+    background-image: linear-gradient(to bottom, #ec0068 0%, #d70036 100%);
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.password-toggle {
+    position: relative;
+}
+
+.password-toggle-indicator {
+    position: absolute;
+    top: 25%;
+    right: 12px;
+    line-height: 0;
+    cursor: pointer;
+}
+
+.m-b-s {
+    margin-bottom: 16px;
+}
+
+.m-b-m {
+    margin-bottom: 24px;
 }
