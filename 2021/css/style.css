@@ -126,7 +126,7 @@ thead td {
 
 .form-select {
     background-color: #fff;
-    background-image: url(icon-normal-more.svg);
+    background-image: url("/2021/img/icon-normal-more.svg");
     background-repeat: no-repeat;
     background-position: right 8px center;
     /* background-size: 16px 12px; */
