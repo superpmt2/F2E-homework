@@ -127,6 +127,7 @@ thead td {
 .form-select {
     background-color: #fff;
     background-image: url("../img/icon-normal-more.svg"); 
+    /* 路徑只要"../img/.."即可，這樣才可以吃到img的圖層“ */
     background-repeat: no-repeat;
     background-position: right 8px center;
     /* background-size: 16px 12px; */
