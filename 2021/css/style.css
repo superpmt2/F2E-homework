@@ -88,7 +88,6 @@ thead td {
 .card {
     color: #271f1f;
     width: 90%;
-    max-width: 960px;
     margin: auto;
     padding: 12px;
     border-radius: 6px;
@@ -194,6 +193,12 @@ button {
     cursor: pointer;
 }
 
+.btn-small {
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+}
+
 .password-toggle {
     position: relative;
 }
@@ -204,6 +209,29 @@ button {
     right: 12px;
     line-height: 0;
     cursor: pointer;
+}
+
+.container {
+    max-width: 960px;
+    margin: auto;
+}
+
+@media screen and (min-width: 480px) {
+    section {
+        width: 49%;
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    article section {
+        width: 100%;
+        display: inline-block;
+    }
+}
+
+.bor-b {
+    border-bottom: 1px solid #ddd;
 }
 
 .m-b-s {

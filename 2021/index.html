@@ -3,126 +3,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>快樂水電工作室</title>
+    <title>工作室</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <h1>快樂工作室</h1>
-    <p>本團隊會很快樂的幫助你解決各種困擾</p>
-    <table class="m-b-m " border="1">
-        <thead>
-            <tr>
-                <td>機票/國家</td>
-                <td>日本</td>
-                <td>美國</td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="subtitle">
-                <td colspan="3">平日</td>
-            </tr>
-            <tr>
-                <td>經濟艙</td>
-                <td>5000</td>
-                <td>8000</td>
-            </tr>
-            <tr>
-                <td>商務艙</td>
-                <td>8000</td>
-                <td>10000</td>
-            </tr>
-        </tbody>
-        <tbody>
-            <tr class="subtitle">
-                <td colspan="3">三月特賣</td>
-            </tr>
-            <tr>
-                <td>經濟艙</td>
-                <td>
-                    <p class="f-s">原價：5000</p>
-                    <p>特價：2500</p>
-                </td>
-                <td>
-                    <p class="f-s">原價：8000</p>
-                    <p>特價：3500</p>
-                </td>
-            </tr>
-            <tr>
-                <td>商務艙</td>
-                <td>
-                    <p class="f-s">原價：8000</p>
-                    <p>特價：10000</p>
-                </td>
-                <td>
-                    <p class="f-s">原價：10000</p>
-                    <p>特價：7999</p>
-                </td>
-            </tr>
-        </tbody>
-        <tbody>
-            <tr class="subtitle">
-                <td colspan="3">四月特賣</td>
-            </tr>
-            <tr>
-                <td>經濟艙</td>
-                <td rowspan="2">
-                    <p>早鳥價：4500</p>
-                </td>
-                <td>
-                    <p class="f-s">原價：8000</p>
-                    <p>特價：3500</p>
-                </td>
-            </tr>
-            <tr>
-                <td>商務艙</td>
-                <td>
-                    <p class="f-s">原價：10000</p>
-                    <p>特價：7999</p>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <div class="card">
-        <div class="card-body">
-            <h2><a href="https://www.etmall.com.tw/">會員登入</a></h2>
-            <form class="m-b-s">
-                <label class="form-label">語系</label>
-                <select class="form-select">
-                    <option value="繁體中文">繁體中文</option>
-                    <option value="English">English</option>
-                </select>
-            </form>
-            <form class="m-b-s">
-                <label class="form-label">帳號</label>
-                <input type="text" placeholder="會員編號或身分證">
-            </form>
-            <form class="m-b-s">
-                <label class="form-label">密碼</label>
-                <div class="password-toggle">
-                    <input type="password" placeholder="4-10位數密碼">
-                    <label class="password-toggle-btn" aria-label="Show/hide password">
-                        <span class="password-toggle-indicator">
-                            <img src="./img/icon-normal-eye.svg" alt="">
-                        </span>
-                    </label>
+    <div class="container">
+        <main>
+            <header class="bor-b m-b-m">
+                <h1>工作室</h1>
+                <p>本團隊會很快樂的幫助你解決各種困擾</p>
+            </header>
+            <article class="bor-b">
+                <header class="m-b-m">
+                    <h3>雙方共同議定條款</h3>
+                    <p>全部設計成品之著作權皆為甲方所有，乙方不得將作品轉售或轉讓予第三者。乙方應擔保所有非甲方所提供之圖片、插畫及其依本約所完成之著作成品均無侵犯他人之著作權或其它權益之情事；若乙方設計提供之圖片、插畫及完成之著作成品有侵犯他人著作權情事發生，乙方願負一切法律責任。但如甲方明知或可得而知或發生侵害爭議之廣告內容係依甲方之指示完成者，不在此限。甲方得保存乙方作品以備參考或未來教學、展示之用；甲方同意乙方可將甲方列入其客戶名單，並提出本件設計成品以供參考或展示。</p>
+                </header>
+                <section>
+                    <div>
+                        <ol>
+                            <li>設計案內容： ＿＿＿＿＿＿（其細目以附件之設計製作費用估價單為準）。</li>
+                            <li>甲方委託乙方擔任本設計案之 ＿＿＿＿＿＿ 職務。</li>
+                            <li>經雙方同意議定於下列時間完成設計與製作，雙方應共同遵守並控制設計製作之進度與品質。</li>
+                        </ol>
+                    </div>
+                </section>
+            </article>
+            <!-- 營業時間 -->
+            <section>
+                <header class="m-b-m">
+                    <h3>營業時間！</h3>
+                    <p>你看不到我你看不到我</p>
+                </header>
+                <table class="m-b-m " border="1">
+                    <thead>
+                        <tr>
+                            <td colspan="7">2021年3月</td>
+                        </tr>
+                        <tr class="subtitle">
+                            <td>週日</td>
+                            <td>週一</td>
+                            <td>週二</td>
+                            <td>週三</td>
+                            <td>週四</td>
+                            <td>週五</td>
+                            <td>週六</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>22</td>
+                            <td>23</td>
+                            <td>24</td>
+                            <td>25</td>
+                            <td>26</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>28</td>
+                            <td></td>
+                            <td>30</td>
+                            <td>31</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <!-- 業配廣告 -->
+            <section>
+                <header class="m-b-m">
+                    <h3>ㄘ我的業配廣告拉！</h3>
+                    <p>餵公子吃餅</p>
+                </header>
+                <table class="m-b-m " border="1">
+                    <thead>
+                        <tr>
+                            <td>機票/國家</td>
+                            <td>日本</td>
+                            <td>美國</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="subtitle">
+                            <td colspan="3">平日</td>
+                        </tr>
+                        <tr>
+                            <td>經濟艙</td>
+                            <td>5000</td>
+                            <td>8000</td>
+                        </tr>
+                        <tr>
+                            <td>商務艙</td>
+                            <td>8000</td>
+                            <td>10000</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr class="subtitle">
+                            <td colspan="3">三月特賣</td>
+                        </tr>
+                        <tr>
+                            <td>經濟艙</td>
+                            <td>
+                                <p class="f-s">原價：5000</p>
+                                <p>特價：2500</p>
+                            </td>
+                            <td>
+                                <p class="f-s">原價：8000</p>
+                                <p>特價：3500</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>商務艙</td>
+                            <td>
+                                <p class="f-s">原價：8000</p>
+                                <p>特價：10000</p>
+                            </td>
+                            <td>
+                                <p class="f-s">原價：10000</p>
+                                <p>特價：7999</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr class="subtitle">
+                            <td colspan="3">四月特賣</td>
+                        </tr>
+                        <tr>
+                            <td>經濟艙</td>
+                            <td rowspan="2">
+                                <p>早鳥價：4500</p>
+                            </td>
+                            <td>
+                                <p class="f-s">原價：8000</p>
+                                <p>特價：3500</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>商務艙</td>
+                            <td>
+                                <p class="f-s">原價：10000</p>
+                                <p>特價：7999</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- <div class="card">
+                <div class="card-body">
+                    <h2><a href="https://www.etmall.com.tw/">會員登入</a></h2>
+                    <form class="m-b-s">
+                        <label class="form-label">語系</label>
+                        <select class="form-select">
+                            <option value="繁體中文">繁體中文</option>
+                            <option value="English">English</option>
+                        </select>
+                    </form>
+                    <form class="m-b-s">
+                        <label class="form-label">帳號</label>
+                        <input type="text" placeholder="會員編號或身分證">
+                    </form>
+                    <form class="m-b-s">
+                        <label class="form-label">密碼</label>
+                        <div class="password-toggle">
+                            <input type="password" placeholder="4-10位數密碼">
+                            <label class="password-toggle-btn" aria-label="Show/hide password">
+                                <span class="password-toggle-indicator">
+                                    <img src="./img/icon-normal-eye.svg" alt="">
+                                </span>
+                            </label>
+                        </div>
+                    </form>
+                    <form class="verification m-b-s">
+                        <label class="form-label">驗證碼</label>
+                        <input type="number" placeholder="輸入下方驗證碼">
+                        <div class="verification">
+                            <img src="./img/code@3x.png" alt="驗證">
+                        </div>
+                    </form>
+                    <div class="form-check">
+                        <input type="checkbox" checked id="記住登入資訊">
+                        <label for="記住登入資訊">記住登入資訊</label>
+                    </div>
+                    <button>登入</button>
+                    <p><a href="">忘記帳號/密碼？</a></p>
+                    <p><a href="">如何加入會員</a></p>
                 </div>
-            </form>
-            <form class="verification m-b-s">
-                <label class="form-label">驗證碼</label>
-                <input type="number" placeholder="輸入下方驗證碼">
-                <div class="verification">
-                    <img src="./img/code@3x.png" alt="驗證">
+            </div> -->
+            <!-- 參考：https://cartzilla.createx.studio/account-signin.html -->
+        </main>
+        <footer class="m-b-m">
+            <a href="./login.html">
+                <div class="card">
+                    <button class="btn-small">點擊登入</button>
                 </div>
-            </form>
-            <div class="form-check">
-                <input type="checkbox" checked id="記住登入資訊">
-                <label for="記住登入資訊">記住登入資訊</label>
-            </div>
-            <button>登入</button>
-            <p><a href="">忘記帳號/密碼？</a></p>
-            <p><a href="">如何加入會員</a></p>
-        </div>
+            </a>
+        </footer>
     </div>
-    <!-- 參考：https://cartzilla.createx.studio/account-signin.html -->
 </body>
 </html>
