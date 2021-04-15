@@ -298,6 +298,8 @@ button {
 
 article {
     color: rgb(44, 44, 44);
+    max-width: 640px;
+    margin: 0 auto;
 }
 
 article header h1 {
