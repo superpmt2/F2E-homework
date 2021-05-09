@@ -287,15 +287,31 @@ button {
     width: 31%;
     margin-right: 2%;
     border: 1px solid rgb(44, 44, 44);
+    border-radius: 20px;
 }
 
 .wrap {
-    background-color: rgb(255, 249, 245);
     box-sizing: content-box;
     margin: -8px;
     padding: 16px;
     height: 100vh;
+    position: relative;
 }
+
+.wrap::after {
+    content: '';
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(../img/bg.png);
+    background-size: 400px;
+    opacity: 0.1;
+    z-index: -1;
+}
+
 
 .article {
     color: rgb(44, 44, 44);
@@ -340,7 +356,14 @@ article footer {
     top: 0;
     display: flex;
     justify-content: space-between;
-    position: sticky;
+    z-index: 10;
+    padding: 10px;
+    background-color: white;
+}
+
+.nav ul li:hover {
+    color: teal;
+    background-color: yellowgreen;
 }
 
 .logo img {
@@ -353,7 +376,7 @@ article footer {
     width: 50px;
     height: 50px;
     position: fixed;
-    right: 10px;
+    right: calc(10% - 10px);
     bottom: 10px;
 }
 
