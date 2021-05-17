@@ -347,6 +347,36 @@ article .first::first-letter {
     color: red;
 }
 
+.float {
+    position: relative;
+}
+
+.float-wrap img {
+    width: 80%;
+    max-width: 500px;
+}
+
+.f-r {
+    float: right;
+    top: 30px;
+}
+
+.f-l {
+    float: left;
+}
+
+@media screen and (max-width: 480px) {
+    .f-l, .f-r {
+        float: none;
+    }
+
+    .float-wrap img {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+
 article footer {
     text-decoration: line-through;
 }
@@ -414,4 +444,12 @@ ul li {
 
 .m-b-m {
     margin-bottom: 24px;
+}
+
+.m-l-s {
+    margin-left: 16px;
+}
+
+.m-r-s {
+    margin-right: 16px;
 }
