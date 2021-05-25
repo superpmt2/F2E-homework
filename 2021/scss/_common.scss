@@ -1,0 +1,115 @@
+article {
+    font-size: 1rem;
+    color: rgb(41, 41, 41);
+    line-height: 1.85rem;
+    max-width: 960px;
+    margin: auto;
+
+    h1 {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
+
+    h3 {
+        font-weight: bold;
+    }
+
+    img {
+        width: 100%;
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    article {
+        font-size: 0.8rem;
+    }
+
+    h1, h2 {
+        color: cadetblue;
+    }
+}
+
+.content {
+    img {
+        width: 100%;
+        display: block;
+        max-width: 360px;
+    }
+}
+
+.flo {
+    float: left;
+    width: 49%;
+}
+
+@media (max-width: 480px) {
+    .flo {
+        width: 100%;
+    }
+}
+
+.f-clear {
+    clear: both;
+}
+
+.mar {
+    margin: 1rem;
+}
+
+.m-t-s {
+    margin-top: 1rem;
+}
+
+.m-b-s {
+    margin-bottom: 1rem;
+}
+
+.m-r-s {
+    margin-right: 1rem;
+}
+
+.m-l-s {
+    margin-left: 1rem;
+}
+
+.m-t-m {
+    margin-top: 1.5rem;
+}
+
+.m-b-m {
+    margin-bottom: 1.5rem;
+}
+
+.m-r-m {
+    margin-right: 1.5rem;
+}
+
+.m-l-m {
+    margin-left: 1.5rem;
+}
+
+.m-t-l {
+    margin-top: 2rem;
+}
+
+.m-b-l {
+    margin-bottom: 2rem;
+}
+
+.pad-s {
+    padding: 1rem;
+}
+
+.pad-m {
+    padding: 1.5rem;
+}
+
+.pad-l {
+    padding: 2rem;
+}
