@@ -73,6 +73,7 @@ article h3 {
 article img {
   width: 100%;
   display: block;
+  margin: auto;
 }
 
 @media (max-width: 480px) {
@@ -87,7 +88,7 @@ article img {
 .content img {
   width: 100%;
   display: block;
-  max-width: 360px;
+  max-width: 60%;
 }
 
 .flo {
@@ -98,6 +99,10 @@ article img {
 @media (max-width: 480px) {
   .flo {
     width: 100%;
+  }
+
+  .content img {
+    max-width: none;
   }
 }
 .f-clear {
