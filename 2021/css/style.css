@@ -64,7 +64,7 @@ article h1 {
   font-weight: bold;
 }
 article h2 {
-  font-size: 1.25rem;
+  font-size: 1.75rem;
   font-weight: bold;
 }
 article h3 {
@@ -90,6 +90,12 @@ article img {
   display: block;
   max-width: 60%;
 }
+.content p::-moz-selection, .content span::-moz-selection {
+  color: orange;
+}
+.content p::selection, .content span::selection {
+  color: orange;
+}
 
 .flo {
   float: left;
@@ -109,58 +115,209 @@ article img {
   clear: both;
 }
 
+section header {
+  position: relative;
+}
+section header h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+section header::before {
+  content: "";
+  position: absolute;
+  border-bottom: 2px solid #292929;
+  opacity: 50%;
+  width: 40%;
+  top: 50%;
+  right: 0;
+}
+section header::after {
+  content: "";
+  position: absolute;
+  border-bottom: 2px solid #292929;
+  opacity: 50%;
+  width: 40%;
+  top: 50%;
+  left: 0;
+}
+@media (max-width: 480px) {
+  section header::after, section header::before {
+    width: 30%;
+  }
+}
+section li {
+  border: 2px solid #dfdfdf;
+}
+section li + li {
+  border-top: none;
+}
+section li:hover {
+  cursor: pointer;
+}
+section li:hover h4 {
+  color: cadetblue;
+  font-size: 1.75rem;
+  -webkit-transition-property: font-size;
+  transition-property: font-size;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+section li h4::-moz-selection {
+  color: orange;
+}
+section li h4::selection {
+  color: orange;
+}
+section .content {
+  width: 70%;
+}
+section .img {
+  width: 30%;
+  margin: auto;
+}
+section h4 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+section .flex p {
+  color: #a5a5a5;
+}
+@media (max-width: 480px) {
+  section .content {
+    width: 60%;
+  }
+  section .pad-m {
+    padding: 1rem;
+  }
+  section .img {
+    width: 30%;
+    margin: unset;
+    margin-left: auto;
+    margin-bottom: auto;
+    margin-top: auto;
+  }
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .mar {
-  margin: 1rem;
+  margin: 2%;
 }
 
 .m-t-s {
-  margin-top: 1rem;
+  margin-top: 2%;
 }
 
 .m-b-s {
-  margin-bottom: 1rem;
+  margin-bottom: 2%;
 }
 
 .m-r-s {
-  margin-right: 1rem;
+  margin-right: 2%;
 }
 
 .m-l-s {
-  margin-left: 1rem;
+  margin-left: 2%;
 }
 
 .m-t-m {
-  margin-top: 1.5rem;
+  margin-top: 3%;
 }
 
 .m-b-m {
-  margin-bottom: 1.5rem;
+  margin-bottom: 3%;
 }
 
 .m-r-m {
-  margin-right: 1.5rem;
+  margin-right: 3%;
 }
 
 .m-l-m {
-  margin-left: 1.5rem;
+  margin-left: 3%;
 }
 
 .m-t-l {
-  margin-top: 2rem;
+  margin-top: 4%;
 }
 
 .m-b-l {
-  margin-bottom: 2rem;
+  margin-bottom: 4%;
 }
 
 .pad-s {
-  padding: 1rem;
+  padding: 2%;
 }
 
 .pad-m {
-  padding: 1.5rem;
+  padding: 3%;
 }
 
 .pad-l {
-  padding: 2rem;
+  padding: 4%;
+}
+
+@media (max-width: 480px) {
+  .mar {
+    margin: 4%;
+  }
+
+  .m-t-s {
+    margin-top: 4%;
+  }
+
+  .m-b-s {
+    margin-bottom: 4%;
+  }
+
+  .m-r-s {
+    margin-right: 4%;
+  }
+
+  .m-l-s {
+    margin-left: 4%;
+  }
+
+  .m-t-m {
+    margin-top: 6%;
+  }
+
+  .m-b-m {
+    margin-bottom: 6%;
+  }
+
+  .m-r-m {
+    margin-right: 6%;
+  }
+
+  .m-l-m {
+    margin-left: 6%;
+  }
+
+  .m-t-l {
+    margin-top: 7.5%;
+  }
+
+  .m-b-l {
+    margin-bottom: 7.5%;
+  }
+
+  .pad-s {
+    padding: 4%;
+  }
+
+  .pad-m {
+    padding: 6%;
+  }
+
+  .pad-l {
+    padding: 7.5%;
+  }
 }

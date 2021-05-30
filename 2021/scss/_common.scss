@@ -11,7 +11,7 @@ article {
     }
 
     h2 {
-        font-size: 1.25rem;
+        font-size: 1.75rem;
         font-weight: bold;
     }
 
@@ -42,6 +42,12 @@ article {
         display: block;
         max-width: 60%;
     }
+
+    p, span {
+        &::selection {
+            color: orange;
+        }
+    }
 }
 
 .flo {
@@ -65,58 +71,240 @@ article {
     clear: both;
 }
 
+section {
+    header {
+        position: relative;
+
+        h4 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            border-bottom: 2px solid #292929;
+            opacity: 50%;
+            width: 40%;
+            top: 50%;
+            right: 0;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            border-bottom: 2px solid #292929;
+            opacity: 50%;
+            width: 40%;
+            top: 50%;
+            left: 0;
+        }
+
+        @media (max-width: 480px) {
+            &::after, &::before {
+                width: 30%;
+            }
+        }
+    }
+
+    li {
+        border: 2px solid rgb(223, 223, 223);
+
+        +li {
+            border-top: none;
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            // @keyframes h4 {
+            //     from {font-size: 1.5rem;}
+            //     to {font-size: 1.75rem;}
+            //   }
+            
+            h4 {
+                color: cadetblue;
+                font-size: 1.75rem;
+                transition-property: font-size;
+                transition-duration: 0.3s;
+                // animation-name: h4;
+                // animation-duration: 1s;
+                // animation-iteration-count: 1;
+                // animation-direction: alternate;
+                // animation-fill-mode: both;
+            }
+        }
+
+        h4 {
+            &::selection {
+                color: orange;
+            }
+        }
+    }
+
+    .content {
+        width: 70%;
+    }
+
+    .img {
+        width: 30%;
+        margin: auto;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+    
+    .flex {
+        p {
+            color: rgb(165, 165, 165);
+        }
+    }
+
+    @media (max-width: 480px) {
+        .content {
+            width: 60%;
+        }
+
+        .pad-m {
+            padding: 1rem;
+        }
+
+        .img {
+            width: 30%;
+            margin: unset;
+            margin-left: auto;
+            margin-bottom: auto;
+            margin-top: auto;
+        }
+    }
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+// .bor-b {
+//     border-bottom: 1px solid rgb(223, 223, 223);
+
+//     &:last-child {
+//         border: none;
+//     }
+// }
+
 .mar {
-    margin: 1rem;
+    margin: 2%;
 }
 
 .m-t-s {
-    margin-top: 1rem;
+    margin-top: 2%;
 }
 
 .m-b-s {
-    margin-bottom: 1rem;
+    margin-bottom: 2%;
 }
 
 .m-r-s {
-    margin-right: 1rem;
+    margin-right: 2%;
 }
 
 .m-l-s {
-    margin-left: 1rem;
+    margin-left: 2%;
 }
 
 .m-t-m {
-    margin-top: 1.5rem;
+    margin-top: 3%;
 }
 
 .m-b-m {
-    margin-bottom: 1.5rem;
+    margin-bottom: 3%;
 }
 
 .m-r-m {
-    margin-right: 1.5rem;
+    margin-right: 3%;
 }
 
 .m-l-m {
-    margin-left: 1.5rem;
+    margin-left: 3%;
 }
 
 .m-t-l {
-    margin-top: 2rem;
+    margin-top: 4%;
 }
 
 .m-b-l {
-    margin-bottom: 2rem;
+    margin-bottom: 4%;
 }
 
 .pad-s {
-    padding: 1rem;
+    padding: 2%;
 }
 
 .pad-m {
-    padding: 1.5rem;
+    padding: 3%;
 }
 
 .pad-l {
-    padding: 2rem;
+    padding: 4%;
+}
+
+@media (max-width: 480px) {
+    .mar {
+        margin: 4%;
+    }
+    
+    .m-t-s {
+        margin-top: 4%;
+    }
+    
+    .m-b-s {
+        margin-bottom: 4%;
+    }
+    
+    .m-r-s {
+        margin-right: 4%;
+    }
+    
+    .m-l-s {
+        margin-left: 4%;
+    }
+    
+    .m-t-m {
+        margin-top: 6%;
+    }
+    
+    .m-b-m {
+        margin-bottom: 6%;
+    }
+    
+    .m-r-m {
+        margin-right: 6%;
+    }
+    
+    .m-l-m {
+        margin-left: 6%;
+    }
+    
+    .m-t-l {
+        margin-top: 7.5%;
+    }
+    
+    .m-b-l {
+        margin-bottom: 7.5%;
+    }
+    
+    .pad-s {
+        padding: 4%;
+    }
+    
+    .pad-m {
+        padding: 6%;
+    }
+    
+    .pad-l {
+        padding: 7.5%;
+    }
 }
