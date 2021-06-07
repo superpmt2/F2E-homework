@@ -8,6 +8,7 @@ article {
     h1 {
         font-size: 2rem;
         font-weight: bold;
+        line-height: 40px;
     }
 
     h2 {
@@ -24,6 +25,18 @@ article {
         display: block;
         margin: auto;
     }
+
+    .logo {
+        width: 50px;
+        border-radius: 25px;
+        overflow: hidden;
+
+        &:hover {
+            transform: skewX(30deg);
+            transition-duration: 0.3s;
+            transform-origin: left bottom;
+        }
+    }
 }
 
 @media (max-width: 480px) {
@@ -37,15 +50,40 @@ article {
 }
 
 .content {
+    .pic {  
+        
+        overflow: hidden;
+    }
+
     img {
         width: 100%;
         display: block;
         max-width: 60%;
+
+        &:hover {
+            transform: scale(1.2);
+            transition-duration: 0.3s;
+        }
     }
 
     p, span {
         &::selection {
             color: orange;
+        }
+    }
+
+    .pic-h {
+        img {
+            height: 210px;
+            object-fit: contain;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .pic-h {
+            img {
+                height: unset;
+            }
         }
     }
 }
@@ -117,16 +155,12 @@ section {
 
         &:hover {
             cursor: pointer;
-
-            // @keyframes h4 {
-            //     from {font-size: 1.5rem;}
-            //     to {font-size: 1.75rem;}
-            //   }
             
             h4 {
                 color: cadetblue;
-                font-size: 1.75rem;
-                transition-property: font-size;
+                transform: scale(1.15);
+                transform-origin: left;
+                transition-property: transform;
                 transition-duration: 0.3s;
                 // animation-name: h4;
                 // animation-duration: 1s;
@@ -148,7 +182,7 @@ section {
     }
 
     .img {
-        width: 30%;
+        // width: 30%;
         margin: auto;
     }
 
@@ -180,12 +214,24 @@ section {
             margin-top: auto;
         }
     }
+
+    .transY {
+        transform: translateY(30px);
+    }
+}
+
+.flex-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .flex {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
 }
+
+
 
 // .bor-b {
 //     border-bottom: 1px solid rgb(223, 223, 223);
@@ -301,10 +347,10 @@ section {
     }
     
     .pad-m {
-        padding: 6%;
+        padding: 5%;
     }
     
     .pad-l {
-        padding: 7.5%;
+        padding: 6%;
     }
 }
