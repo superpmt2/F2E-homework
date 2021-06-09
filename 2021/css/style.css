@@ -81,14 +81,6 @@ article .logo {
   border-radius: 25px;
   overflow: hidden;
 }
-article .logo:hover {
-  -webkit-transform: skewX(30deg);
-          transform: skewX(30deg);
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
-  -webkit-transform-origin: left bottom;
-          transform-origin: left bottom;
-}
 
 @media (max-width: 480px) {
   article {
@@ -106,12 +98,12 @@ article .logo:hover {
   width: 100%;
   display: block;
   max-width: 60%;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 .content img:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
 }
 .content p::-moz-selection, .content span::-moz-selection {
   color: orange;
@@ -190,14 +182,11 @@ section li:hover {
 }
 section li:hover h4 {
   color: cadetblue;
-  -webkit-transform: scale(1.15);
-          transform: scale(1.15);
-  -webkit-transform-origin: left;
-          transform-origin: left;
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform;
+  font-size: 1.75rem;
+}
+section li h4 {
+  -webkit-transition-property: font-size;
+  transition-property: font-size;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
 }
