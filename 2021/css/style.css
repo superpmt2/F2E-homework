@@ -238,6 +238,49 @@ article .logo {
   border-radius: 25px;
   overflow: hidden;
 }
+article .tooth {
+  padding: 20px;
+}
+article .tooth p {
+  line-height: 1.5;
+  font-size: 16px;
+  margin-top: 10px;
+}
+article .tooth .app_icon__container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+article .tooth .app_icon__item {
+  width: 23%;
+  text-align: center;
+}
+article .tooth .app_icon__item:not(.item05, .item06, .item07, .item08) {
+  margin-bottom: 40px;
+}
+article .tooth .app_icon__item img {
+  width: 50%;
+}
+@media (max-width: 768px) {
+  article .tooth .app_icon__item {
+    width: 43%;
+  }
+  article .tooth .item05, article .tooth .item06 {
+    margin-bottom: 40px;
+  }
+  article .tooth:not(.item07, .item08) {
+    margin-bottom: unset;
+  }
+}
 
 @media (max-width: 480px) {
   article {

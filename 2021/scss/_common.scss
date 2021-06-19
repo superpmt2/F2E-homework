@@ -138,6 +138,51 @@ article {
         border-radius: 25px;
         overflow: hidden;
     }
+
+    .tooth {
+        padding: 20px;
+
+        p{
+            line-height: 1.5;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .app_icon__container {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .app_icon__item {
+            width: 23%;
+            text-align: center;
+            
+            &:not(.item05, .item06, .item07, .item08) {
+                margin-bottom: 40px;
+            }
+
+            img {
+                width: 50%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .app_icon__item {
+                width: 43%;
+            }
+
+            .item05, .item06 {
+                margin-bottom: 40px;
+            }
+
+            &:not(.item07, .item08) {
+                margin-bottom: unset;
+            }
+        }
+    }
 }
 
 @media (max-width: 480px) {
