@@ -462,7 +462,7 @@ ul li {
 @media screen and (max-width: 480px) {
     ul {
         /* flex-direction: column; */
-        position: fixed;
+        /* position: fixed; */
         right: 10px;
     }
 }
