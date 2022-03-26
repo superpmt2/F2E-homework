@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-Han-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[題目] 變數賦值與頁面給值</title>
+</head>
+<style>
+  .meme__wrap {
+    position: relative;
+  }
+  .meme__text {
+    position: absolute;
+    z-index: 1;
+    top: 410px;
+    left: 230px;
+    font-size: 16px;
+    color: white;
+    text-shadow: 0 0 4px black;
+  }
+</style>
+<body>
+  <h1><span id="name">徐郁喆</span>！永遠不要看輕自己！</h1>
+  <div class="meme__wrap">
+    <!-- 不能修改 start -->
+    <div class="meme__text">
+      <p>李嘉誠、馬雲、比爾蓋茲、巴菲特、還有<span id="targetName">你</span>，</p>
+      <p>你們五個人的總資產加起來，足以撼動世界！</p>
+    </div>
+    <!-- 不能修改 end -->
+    <img src="meme.png" alt="">
+  </div>
+  <script>
+    let targetName = document.getElementById("targetName");
+    let SelfName = document.getElementById("name");
+    targetName.innerText = SelfName.innerText;
+  </script>
+</body>
+</html>
