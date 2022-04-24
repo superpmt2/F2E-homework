@@ -1,0 +1,32 @@
+main {
+    background-color: #f7f7f7;
+}
+
+body {
+    background-color: #fff;
+}
+
+.layout--main {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 960px;
+}
+
+.page-content {
+    width: 100%;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+footer {
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    border-radius: 12px 12px 0px 0px;
+    box-shadow: 0px -2px 12px rgba(0,0,0,0.6) ;
+}

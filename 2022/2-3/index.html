@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css作業</title>
+    <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset200802.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 有幫大家寫好一些物件的寬高，最後再解掉註解就好了 */
+        footer ul {
+            height: 60px;
+            width: 100%;
+            font-size: 0;
+        }
+
+        footer li {
+            display: inline-block;
+            width: 20%;
+            text-align: center;
+        }
+
+        footer li a {
+            vertical-align: middle;
+            display: inline-block;
+        }
+
+        footer li span {
+            font-size: 12px;
+            display: inline-block;
+        }
+
+        footer li img {
+            width: 24px;
+            height: 24px;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="layout--main">
+        <img src="assets/web-page.jpg" alt="頁面內容" class="page-content">
+        <footer class="layout--main">
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="assets/icon-1.png" alt="回主會場">
+                        <span>回主會場</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="assets/icon-2.png" alt="熱門活動">
+                        <span>熱門活動</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="assets/icon-3.png" alt="紀錄查詢">
+                        <span>紀錄查詢</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="assets/icon-4.png" alt="我的禮物盒">
+                        <span>我的禮物盒</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="assets/icon-5.png" alt="必買攻略">
+                        <span>必買攻略</span>
+                    </a>
+                </li>
+
+            </ul>
+        </footer>
+    </main>
+</body>
+
+</html>
