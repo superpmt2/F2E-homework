@@ -7,11 +7,19 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="aaa"></div>
-    <div class="bbb"></div>
+    <div id="aaa"></div>
+    <div id="bbb"></div>
 
     <script>
+        let aaa = '嗯嗯恩' + '哦哦哦哦',
+            bbb = 99 % 2;
+
+        console.log(aaa,bbb);
+        console.log(typeof aaa,typeof bbb);
         
+        document.getElementById('aaa').innerText = aaa;
+        document.getElementById('bbb').innerText = bbb;
+
     </script>
 </body>
 </html>
