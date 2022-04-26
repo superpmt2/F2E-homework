@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="style.css">
     <style>
         /* 有幫大家寫好一些物件的寬高，最後再解掉註解就好了 */
-        footer ul {
+        /* 使用display: inline-block / block */
+        /* footer ul {
             width: 100%;
             font-size: 0;
         }
@@ -30,6 +31,62 @@
         footer li span {
             font-size: 12px;
             display: inline-block;
+        }
+
+        footer li img {
+            width: 24px;
+            height: 24px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* 使用table(css) */
+        /* footer ul {
+            width: 100%;
+            display: table;
+            padding: 10px 0;
+        }
+
+        footer li {
+            display: table-cell;
+            width: 20%;
+            text-align: center;
+        }
+
+        footer li a {
+        }
+
+        footer li span {
+            font-size: 12px;
+        }
+
+        footer li img {
+            width: 24px;
+            height: 24px;
+            display: block;
+            margin: 0 auto;
+        } */
+
+        /* 使用float */
+        footer ul {
+            width: 100%;
+        }
+
+        footer li {
+            width: 20%;
+            float: left;
+        }
+
+        footer li a {
+            clear: both;
+            display: block;
+            text-align: center;
+            padding: 10px 0;
+
+        }
+
+        footer li span {
+            font-size: 12px;
         }
 
         footer li img {
