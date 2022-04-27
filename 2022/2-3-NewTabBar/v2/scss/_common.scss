@@ -1,0 +1,131 @@
+.p-{
+    &xxs{
+        padding: 8px;
+    }
+
+    &xs{
+        padding: 12px;
+    }
+
+    &s{
+        padding: 16px;
+    }
+
+    &m{
+        padding: 20px;
+    }
+
+    &l{
+        padding: 24px;
+    }
+}
+
+.m-{
+    &s{
+        margin: 16px;
+    }
+
+    &m{
+        margin: 20px;
+    }
+
+    &l{
+        margin: 24px;
+    }
+
+    &b-{
+        &xs{
+            margin-bottom: 12px;
+        }
+        
+        &l{
+            margin-bottom: 24px;
+        }
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+main {
+    background-color: #f7f7f7;
+}
+
+body {
+    background-color: #fff;
+}
+
+.layout--main {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 960px;
+    box-sizing: border-box;
+}
+
+.page-content {
+    width: 100%;
+    max-width: 100%;
+}
+
+
+
+footer {
+    background-color: rgb(17, 24, 91);
+    position: fixed;
+    bottom: 0;
+    width: 90%;
+    border-radius: 16px;
+    margin-bottom: 24px;
+    left: 5vw;
+
+    ul {
+        display: table;
+        margin: 0 auto;
+        width: 100%;
+        /* padding: 0 38px; */
+        font-size: 12px;
+    }
+    
+    li {
+        display: table-cell;
+        width: 20%;
+        // height: 56px;
+        text-align: center;
+        vertical-align: middle;
+        position: relative;
+        padding: 0 8px 12px;
+
+        a {
+            text-decoration: none;
+            color: white;
+            display: block;
+
+            img {
+                display: block;
+                margin: 0 auto;
+                padding: 10px;
+            }
+
+            &.active {
+                // color: rgb(17, 24, 91);
+                
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 50%;
+                    height: 57%;
+                    left: 35px;
+                    top: 0px;
+                    background-color: rgb(177, 182, 232);
+                    opacity: 30%;
+                    border-radius: 0 0 12px 12px;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+}
+
+
+
