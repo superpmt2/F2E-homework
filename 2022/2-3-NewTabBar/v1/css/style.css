@@ -36,7 +36,7 @@ ul {
     display: table;
     margin: 0 auto;
     width: 100%;
-    padding: 0 38px;
+    /* padding: 0 38px; */
     box-sizing: border-box;
     font-size: 12px;
 }
@@ -54,10 +54,12 @@ img {
     display: block;
     margin: 0 auto;
     padding: 3px;
+    /* margin-top: -20px; */
 }
 
 .flo-pic {
-    position: absolute;
+    /* position: absolute;
     top: -25px;
-    left: 5.5vw;
+    left: 5.5vw; */
+    margin-top: -30px;
 }
