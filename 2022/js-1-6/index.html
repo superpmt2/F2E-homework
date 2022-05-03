@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="name"></div>
+    <div id="number"></div>
+    <div id="state"></div>
+
+    <!-- Google 推薦寫法，雖然會耗效能，但因目前手機的效能過剩，所以是可以這樣撰寫 -->
+    <script>
+        let nameString, favoriteNumber, stateString; //先定義兩個變數
+        nameString = '深海大鳳梨裡的' + '海ㄇ寶寶'; //賦字串內容
+        favoriteNumber = 5987 % 100 //取餘數
+        stateString = (favoriteNumber > 5) ? '大件貨' : '小件貨'; //設定條件
+
+        let nameElement = document.getElementById('name'); //定義一個容器來裝名稱為name的元素
+        nameElement.innerText = nameString; //將nameString整個容器包含裡面的值倒入nameElement裡面，當作nameElement裡面的文字
+
+        let numberElement = document.getElementById('number'); //同上一段
+        numberElement.innerText = favoriteNumber;
+        
+        let stateElment = document.getElementById('state'); //同上一段
+        stateElment.innerText = stateString;
+
+    </script>
+    <!-- Google 推薦寫法，雖然會耗效能，但因目前手機的效能過剩，所以是可以這樣撰寫 -->
+    
+    <!-- 為了美觀及易讀性，一般RD的寫法 -->
+    <!-- <script>
+        //let nameString, favoriteNumber;
+        let nameElement = document.getElementById('name');
+        let numberElement = document.getElementById('number') //將要用let定義的變數全部寫在一起
+
+        //第一段開始賦值
+        nameString = '深海大鳳梨裡的' + '海ㄇ寶寶'; 
+        favoriteNumber = 5987 % 100;
+        //第一段結束賦值
+
+        //第二段開始賦值
+        nameElement.innerText = nameString;
+        numberElement.innerText = favoriteNumber;
+        //第二段結束賦值
+    </script> -->
+    <!-- 為了美觀及易讀性，一般RD的寫法 -->
+</body>
+</html>
