@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[作業] 1-7</title>
+    <style>
+        .btn {
+            width: 50px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <span>姓名：</span>
+    <input type="text" id="name">
+    <span>年齡：</span>
+    <input type="number" id="age" inputmode="numeric">
+    <span>性別：</span>
+    <select id="gender">
+        <option value="female" selected>女</option>
+        <option value="male">男</option>
+    </select>
+    <div class="btn" id="btn">打招呼</div>
+    <h2 id="sayHello"></h2>
+
+    <script>
+
+        function sayHi(nickname){
+            const name = document.getElementById('name').value;
+            const gender = document.getElementById('gender').value;
+            const sayHello = document.getElementById('sayHello');
+            const text = gender === 'male' ? '你' : '妳';
+            let finalNickname;
+
+            if(typeof nickname != 'string') finalNickname = '';
+
+            sayHello.innerText = '嗨～' + name + finalNickname + '，' + text + '好呀～';
+
+        }
+
+        function sayHi(){
+            const name = document.getElementById('name').value;
+            const gender = document.getElementById('gender').value;
+            const sayHello = document.getElementById('sayHello');
+            const text = gender === 'male' ? '你' : '妳';
+            const age = document.getElementById('age').value;
+            let nickname = '';  
+
+            // 如果年齡大於等於18，男的叫先生、女的叫小姐
+            // 如果小於7歲，男的叫正太，女的叫蘿莉
+            // 其他的男生叫弟弟，女生叫妹妹
+            // gender的值有兩種，一種是'male'，一種是'female'
+            
+            // 作答區 start
+            if (age > 18) {
+                if( gender === 'male') {
+                    nickname = '先生';
+                } else {
+                    nickname = '小姐';
+                }
+            } else {
+                
+            }
+            // 作答區 end
+            let coma = name ? '，' : '';
+            sayHello.innerText = '嗨～' + name + nickname + coma + text + '好呀～';
+
+        }
+
+        const btn = document.getElementById('btn');
+        btn.addEventListener('click', sayHi);
+
+    </script>
+</body>
+</html>
