@@ -9,6 +9,7 @@
         .btn {
             width: 50px;
             border: 1px solid #000;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -26,7 +27,6 @@
     <h2 id="sayHello"></h2>
 
     <script>
-
         function sayHi(nickname){
             const name = document.getElementById('name').value;
             const gender = document.getElementById('gender').value;
@@ -37,7 +37,6 @@
             if(typeof nickname != 'string') finalNickname = '';
 
             sayHello.innerText = '嗨～' + name + finalNickname + '，' + text + '好呀～';
-
         }
 
         function sayHi(){
@@ -60,13 +59,23 @@
                 } else {
                     nickname = '小姐';
                 }
+            } else if (age < 7) {
+                    if (gender === 'male') {
+                        nickname = '正太';
+                    }
+                    else {
+                        nickname = '蘿莉';
+                    }
             } else {
-                
+                if (gender === 'male') {
+                    nickname = '弟弟';
+                } else {
+                    nickname = '妹妹';
+                }
             }
             // 作答區 end
             let coma = name ? '，' : '';
             sayHello.innerText = '嗨～' + name + nickname + coma + text + '好呀～';
-
         }
 
         const btn = document.getElementById('btn');
