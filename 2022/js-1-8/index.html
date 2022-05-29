@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[作業] 1-8</title>
+    <style>
+        .time {
+            margin-left: auto;
+            margin-right: auto;
+            width: 500px;
+            font-size: 50px;
+            text-align: center;
+        }
+        .bomb__wrap {
+            display: flex;
+            justify-content: space-between;
+            margin-left: auto;
+            margin-right: auto;
+            width: 500px;
+        }
+        .bomb__wrap div {
+            flex: 0 0 30%;
+            margin-bottom: 20px;
+        }
+        .line {
+            height: 2px;
+        }
+        .red .line {
+            background-color: red;
+        }
+        .yellow .line {
+            background-color: rgb(180, 180, 32);
+        }
+        .green .line {
+            background-color: green;
+        }
+        .btn {
+            width: 50px;
+            border: 1px solid #000;
+            text-align: center;
+            cursor: pointer;
+        }
+        img {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            pointer-events: none;
+            opacity: 0;
+        }
+        img.active{
+            animation: bomb 1s both;
+        }
+        @keyframes bomb {
+            from {
+                transform: scale(0);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="time" class="time">9</div>
+    <div class="bomb__wrap">
+        <div class="red">
+            <div class="line"></div>
+            <div id="btnRed" class="btn" data-bomb="0">拆線</div>
+        </div>
+        <div class="yellow">
+            <div class="line"></div>
+            <div id="btnYellow" class="btn" data-bomb="1">拆線</div>
+        </div>
+        <div class="green">
+            <div class="line"></div>
+            <div id="btnGreen" class="btn" data-bomb="2">拆線</div>
+        </div>
+    </div>
+    <img src="bomb.jpg" alt="">
+    <img src="safe.jpg" alt="">
+    <script>
+        let bomb;
+        let img = document.getElementsByTagName('img');
+        let stop = false;
+        function countdown(time){
+            setTimeout(function(){
+                makeBomb();
+
+                if(stop) return;
+
+                const timeElement = document.getElementById('time');
+                timeElement.innerText = time;
+
+                if(time == 0) {
+                img[0].classList.add('active');
+            }
+
+            }, 1000 * (9 - time));
+        }
+
+        function makeBomb(){
+            bomb = Math.floor(Math.random()*3);
+        }
+
+        function stopBomb(){
+            stop = true;
+            console.log(this);
+        }
+
+        let btns = document.querySelectorAll('.btn');
+        btns.forEach(function(el){
+            el.addEventListener('click', function(){
+                stop = true;
+
+                if (el.dataset.bomb != bomb) img[0].classList.add('active');
+                else img[1].classList.add('active');
+            });
+        });
+
+        // 作答區 start
+        for (let time = 9; time >= 0; time-- ) {
+            countdown(time);
+        }
+        // 作答區 end
+    </script>
+</body>
+</html>
