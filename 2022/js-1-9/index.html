@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[作業] 1-9</title>
+</head>
+<body>
+    <input type="number" id="inputNumber">
+    <div id="output"></div>
+    <script>
+        const inputNumber = document.getElementById('inputNumber');
+        const inputValue = document.getElementById('inputNumber').value;
+
+        inputNumber.addEventListener('change', function(){
+            const inputValue = inputNumber.value;
+            
+            addZero(inputValue);
+        });
+
+        // ==== 作答區 Start ====
+
+        // ==== 作答區 End ====
+
+
+    </script>
+</body>
+</html>
