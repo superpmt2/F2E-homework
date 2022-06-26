@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[作業] 1-11</title>
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+        if (window.innerWidth > 960) {
+            document.body.style.backgroundColor = "red";
+        } else {
+            document.body.style.backgroundColor = "blue";
+        }
+
+        addEventListener('resize', function () {
+            if (window.innerWidth > 960) {
+                document.body.style.backgroundColor = "red";
+            } else {
+                document.body.style.backgroundColor = "blue";
+            }
+        });
+
+        // alert Start
+        alert('任意打招呼文字');
+        // alert END
+
+        // confirm & prompt Start
+        let confirmValue = confirm('邀請參加東森618演唱會');
+
+        // console.log(confirmValue);
+
+        if (confirmValue === false) {
+            // console.log('好可惜');
+            let outputValue = '好可惜'
+            output.innerText = outputValue;
+        } else {
+            // console.log('好棒');
+            let promptValue = prompt('請輸入大名');
+            // console.log(promptValue);
+
+            if (promptValue === null) {
+                let outputValue = '突然不想參加了？若還想參加請重整頁面輸入名稱'
+                output.innerText = outputValue;
+            } else {
+                output.innerText = promptValue + '歡迎你';
+            }
+        }
+        // confirm & prompt END
+    </script>
+</body>
+</html>
