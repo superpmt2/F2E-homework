@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[解答] 1-11</title>
+</head>
+<body>
+    <div id="show"></div>
+    <script>
+        const windowWidth = window.innerWidth;
+        // console.log(windowWidth);
+        
+        // if(windowWidth >= 960) {
+        //     document.body.style.backgroundColor = '#faa';
+        // } else {
+        //     document.body.style.backgroundColor = '#afa';
+        // }
+
+        document.body.style.backgroundColor = (windowWidth >= 960) ? '#faa' : '#afa';
+
+        alert('歡迎光臨！');
+
+        const isConfirm = confirm('是否要參加東森618演唱會奪大獎？');
+        // console.log(isConfirm);
+
+        const element = document.getElementById('show');
+
+        if(isConfirm) {
+            const userName = prompt('請輸入大名');
+
+            element.innerText = userName + '歡迎你!';
+        } else {
+            element.innerText = '好可惜唷！';
+        }
+
+    </script>
+</body>
+</html>

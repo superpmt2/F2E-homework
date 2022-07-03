@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        *:before,
+        *:after {
+            box-sizing: border-box;
+        }
+
+        a {
+            display: block;
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            width: 100%;
+            border: 0;
+        }
+
+        article,
+        main,
+        nav,
+        section {
+            display: block;
+        }
+
+        body {
+            margin: 0;
+            font-family: PingFangTC-regular, "LiHei Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Source Han Sans TC", "Microsoft JhengHei", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+
+        .body-color {
+            /* 外部背景底色 */
+            background-color: #f1b310;
+        }
+
+        .sp--960 {
+            position: relative;
+            z-index: 0;
+            max-width: 960px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /*-- note start --*/
+        .note {
+            font-size: 15px;
+            word-break: break-all;
+            line-height: 150%;
+        }
+
+        .note article {
+            padding: 1.5%;
+            /* 內部背景底色 */
+            background-color: #ffffff;
+            border-radius: 5px;
+        }
+
+        .note article a {
+            display: inline;
+            color: #ce2212;
+            text-decoration: underline;
+            word-break: break-all;
+        }
+
+        .note article a:hover {
+            text-decoration: none;
+        }
+
+        .note li {
+            padding: 5px;
+        }
+
+        .note ol>li {
+            margin-left: 30px;
+        }
+
+        .act_name {
+            font-size: 32px;
+            color: #fff;
+            /* 主標底色 */
+            background-color: #15151d;
+            line-height: 32px;
+            text-align: center;
+            letter-spacing: 2px;
+            font-weight: bold;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .h2_style {
+            font-size: 24px;
+            /* 活動名稱顏色 */
+            color: #9b2121;
+            line-height: 30px;
+            margin-top: 15px;
+        }
+
+        @media (max-width: 700px) {
+            .act_name {
+                font-size: 24px;
+                line-height: 24px;
+            }
+
+            .h2_style {
+                font-size: 20px;
+                line-height: 24px;
+            }
+        }
+
+        .p-notice {
+            font-size: 24px;
+            color: #555555;
+            line-height: 42px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        @media (max-width: 700px) {
+            .p-notice {
+                font-size: 20px;
+            }
+        }
+
+        .p-notice-words {
+            color: #555555;
+        }
+
+        .note .decimal-type {
+            /* 阿拉伯數字 */
+            list-style-type: decimal;
+        }
+
+        .note .lower-alpha-type {
+            /* 小寫英文字母 */
+            list-style-type: lower-alpha;
+        }
+
+        .note .none-type {
+            /* 不顯示符號 */
+            list-style-type: none;
+        }
+
+        .note .disc-type {
+            /* 實心圓形 */
+            list-style-type: disc;
+        }
+
+        .btn_a1 {
+            /* 按鈕底色 */
+            background-color: #ce2212;
+            padding: 5px 30px;
+            border-radius: 5px;
+        }
+
+        .btn_p1 {
+            font-size: 24px;
+            line-height: 52px;
+            font-weight: bold;
+            margin: 0 0 5px 35px;
+        }
+
+        .note article .btn_p1 a {
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .note article .btn_p1 a:hover {
+            /* 滑鼠移過 按鈕底色 */
+            background-color: #ff5747;
+        }
+
+        /*-- rwd table --*/
+        .note table.rwd-table {
+            width: 100%;
+            border: none;
+            border-collapse: collapse;
+            background-color: #eeeeee;
+            overflow: hidden;
+            margin: 0 0 10px 0;
+        }
+
+        .note table.rwd-table th {
+            display: none;
+        }
+
+        .note table.rwd-table td {
+            display: block;
+            text-align: left;
+        }
+
+        .note table.rwd-table td:before {
+            content: attr(data-th) ": ";
+            display: inline-block;
+            margin: 5px 5px 5px 0;
+            color: #9b2121;
+            font-weight: bold;
+        }
+
+        .note table.rwd-table tr:nth-child(even) {
+            background-color: #dadada;
+        }
+
+        .note table.rwd-table th,
+        .rwd-table td {
+            margin: .5em 1em;
+        }
+
+        @media (min-width: 700px) {
+            .note table.rwd-table {
+                width: 95%;
+                border: 1px solid #15151d;
+                background-color: #fff;
+                margin: 0 auto 15px;
+            }
+
+            .note table.rwd-table tr:nth-child(even) {
+                background: transparent;
+            }
+
+            .note table.rwd-table th {
+                /* 表頭底色 */
+                background-color: #ffe39a;
+            }
+
+            .note table.rwd-table th,
+            .note table.rwd-table td {
+                border: 1px solid #15151d;
+            }
+
+            .note table.rwd-table td:nth-child(4) {
+                border: 1px solid #15151d;
+            }
+
+            .note table.rwd-table td:before {
+                display: none;
+            }
+
+            .note table.rwd-table th,
+            .note table.rwd-table td {
+                display: table-cell;
+                padding: .25em .5em;
+                text-align: center;
+            }
+
+            .note table.rwd-table th,
+            .note table.rwd-table td {
+                padding: 0.8em !important;
+            }
+        }
+
+        /* 插入圖片 */
+        .photo_style {
+            display: block;
+            margin: 0 auto;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        /*-- note end --*/
+    </style> -->
+</head>
+<body>
+    <section class="note body-color" name="note">
+        <div class="sp--960" style="padding:1% 0 3% 0;">
+            <article>
+                <a name="note-top" id="note-top"></a>
+                <p class="act_name">活動辦法</p>
+                <h2 class="h2_style">【美妝館夏日美膜女】</h2>
+                <p class="btn_p1"><a class="btn_a1 GAEventTracking" href="https://www.etmall.com.tw/Activity/Reg/1112"
+                        target="_blank" ga_eventname="Eweb_Eventpage_SP_15303"
+                        ga_eventlabel="Eweb_Eventpage_SP_15303_159" ga_eventnum="0" ga_eventpictxt="pro"
+                        ga_eventaction="https://www.etmall.com.tw/Activity/Reg/1112">點我登記</a></p><!-- 最多8字，超過會破版 -->
+
+                <ol class="decimal-type">
+                    <li>活動名稱：美妝館夏日美膜女-指定品滿$2000登記雙重抽(限量名額)</li>
+                    <li>活動期間：2022/07/01 AM 10:00~2022/07/15 AM 10:00</li>
+                    <li>門檻及獎項說明：
+                        <ol class="lower-alpha-type">
+                            <li>登記抽(1) 「ON THE BODY 足嫩肌泡沫清潔液(市價$299)」X1(限量100名)</li>
+                            (香味隨機出貨不挑款:檸檬薄荷385ml、葡萄柚薄荷385ml、阿拉斯加冰河水385ml、去角質噴霧240ml)
+                        </ol>
+                    </li>
+                    <li>登記抽(2) 登記抽 $200樂透金，限量50名</li>
+
+
+                    <li>活動內容：
+                        <ol class="lower-alpha-type">
+                            <li>活動期間內於「東森購物網」指定專區購買指定商品消費，單筆訂單實付金額</li>
+                        </ol>
+                    </li>符合登記抽門檻條件，即可點選<a href="https://www.etmall.com.tw/Activity/Reg/1112" target="_blank"
+                        ga_eventname="Eweb_Eventpage_SP_15303" ga_eventlabel="Eweb_Eventpage_SP_15303_160"
+                        ga_eventnum="0" ga_eventpictxt="pro"
+                        ga_eventaction="https://www.etmall.com.tw/Activity/Reg/1112"
+                        class="GAEventTracking">【點我登記】</a>參與抽獎。
+                    <li>活動期間單筆訂單各門檻可登記乙次，活動期間每一會員限抽雙好禮乙次(不得累計及修改)</li>
+
+
+                    <li>給獎內容：登記抽獎會員共100名
+                        <ol class="lower-alpha-type">
+                            <li>限50名：抽「足嫩肌泡沫清潔液」x1個+樂透金$200元</li>
+                            <li>限50名：抽「足嫩肌泡沫清潔液」x1個</li>
+                        </ol>
+                    </li>
+                    <li>贈獎形式/時間/效期：無取消/退貨者將於2022/8/12(五)後抽出以上得獎者
+                        <ol class="lower-alpha-type">
+                            <li>「足嫩肌泡沫清潔液」將於2022/8/15(一)後陸續寄出至下單地址</li>
+                            <li>「樂透金$200」將於2022/8/15(一)前匯入會員帳戶內(使用效期至2022/8/22)</li>
+                        </ol>
+                    </li>
+                    <li>活動參與專區：
+                        <ol class="lower-alpha-type">
+                            <li>【激推炎夏！水女孩必備】<a href="https://www.etmall.com.tw/gp/177010" target="_blank"
+                                    ga_eventname="Eweb_Eventpage_SP_15303" ga_eventlabel="Eweb_Eventpage_SP_15303_161"
+                                    ga_eventnum="0" ga_eventpictxt="pro"
+                                    ga_eventaction="https://www.etmall.com.tw/gp/177010"
+                                    class="GAEventTracking">點我看專區</a></li>
+                            <li>「【提升防曬力！擊退豔陽】<a href="https://www.etmall.com.tw/gp/177011" target="_blank"
+                                    ga_eventname="Eweb_Eventpage_SP_15303" ga_eventlabel="Eweb_Eventpage_SP_15303_162"
+                                    ga_eventnum="0" ga_eventpictxt="pro"
+                                    ga_eventaction="https://www.etmall.com.tw/gp/177011"
+                                    class="GAEventTracking">點我看專區</a></li>
+                            <li>【美白x抗痘！逆光肌感】<a href="https://www.etmall.com.tw/gp/177012" target="_blank"
+                                    ga_eventname="Eweb_Eventpage_SP_15303" ga_eventlabel="Eweb_Eventpage_SP_15303_163"
+                                    ga_eventnum="0" ga_eventpictxt="pro"
+                                    ga_eventaction="https://www.etmall.com.tw/gp/177012"
+                                    class="GAEventTracking">點我看專區</a></li>
+                            <li>【膜力保水！這夏輕透亮】<a href="https://www.etmall.com.tw/gp/177013" target="_blank"
+                                    ga_eventname="Eweb_Eventpage_SP_15303" ga_eventlabel="Eweb_Eventpage_SP_15303_164"
+                                    ga_eventnum="0" ga_eventpictxt="pro"
+                                    ga_eventaction="https://www.etmall.com.tw/gp/177013"
+                                    class="GAEventTracking">點我看專區</a></li>
+                            <li>【BIO UP 自然美】<a href="https://www.etmall.com.tw/p/174966" target="_blank"
+                                    ga_eventname="Eweb_Eventpage_SP_15303" ga_eventlabel="Eweb_Eventpage_SP_15303_165"
+                                    ga_eventnum="0" ga_eventpictxt="pro"
+                                    ga_eventaction="https://www.etmall.com.tw/p/174966"
+                                    class="GAEventTracking">點我看專區</a></li>
+                            <li>【DeMon】<a href="https://www.etmall.com.tw/gp/175282" target="_blank"
+                                    ga_eventname="Eweb_Eventpage_SP_15303" ga_eventlabel="Eweb_Eventpage_SP_15303_166"
+                                    ga_eventnum="0" ga_eventpictxt="pro"
+                                    ga_eventaction="https://www.etmall.com.tw/gp/175282"
+                                    class="GAEventTracking">點我看專區</a></li>
+                        </ol>
+                    </li>
+
+
+
+
+
+
+                    <p class="p-notice">活動注意事項</p>
+                    <ol class="p-notice-words decimal-type">
+                        <li>限網路/APP下單(電話下單、電視購物、直消電商除外)。</li>
+                        <li>每會員於活動期間限贈送乙次。</li>
+                        <li>未於活動期間內完成登記者，逾時視同放棄，恕無法參與活動。</li>
+                        <li>訂單成立後須於24小時內付款，如未完成付款，東森購物保有取消訂單之權利。</li>
+                        <li>凡透過導購網站(如LINE購物、SHOPBACK等)至東森購物網消費成立訂單者，將不符合回饋資格。</li>
+                        <li>回饋資格符合與否將以系統判定之實際訂單產生來源為依據，將不另行通知。</li>
+                        <li>回饋金額將以實際完成訂單之發票金額計算。</li>
+                        <li>回饋之樂透金僅限抵扣一般消費帳款，恕不得要求折現或轉讓予他人。</li>
+                        <li>東森購物網保有活動變更、修改或終止本活動之權力，如有異動，修改後之內容將公佈在東森購物網上。</li>
+
+                    </ol>
+                </ol>
+            </article>
+        </div>
+    </section>
+    <script>
+        
+        let tagElement = document.querySelectorAll('h2');
+        console.log(tagElement);
+        let liElement = document.getElementsByTagName('li');
+        console.log(liElement);
+        
+        tagElement.style.backgroundColor = '#0fa';
+        liElement.style.backgroundColor = '#0f0';
+        
+    </script>
+</body>
+</html>

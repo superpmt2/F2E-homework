@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[範例] 1-12</title>
+</head>
+<body>
+
+    <a href="" id="anchor">連結1</a>
+    <a href="" id="anchor">連結2</a>
+
+    <div class="test">test1</div>
+    <div class="test">test2</div>
+    <div class="test">test3</div>
+    <p class="test">test4</p>
+
+    <script>
+
+        const anchor = document.getElementById('anchor');
+        const link = document.querySelector('#anchor');
+        console.log('anchor:', anchor);
+        console.log('link:', link);
+
+        const test1 = document.getElementsByClassName('test');
+        const test2 = document.getElementsByTagName('div');
+        const test3 = document.querySelectorAll('.test');
+        const test1Item1 = test1[0];
+        const test2Item2 = test2[1];
+        console.log('test1:', test1);
+        console.log('test2:', test2);
+        console.log('test3:', test3);
+        console.log('test1Item1:', test1Item1);
+        console.log('test2Item2:', test2Item2);
+
+        for(let i = 0; i < test3.length; i++) {
+
+            console.log('for:','第' + (i+1) + '項', test3[i]);
+
+        }
+
+    </script>
+</body>
+</html>
