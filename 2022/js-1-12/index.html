@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <style>
+    <style>
         * {
             box-sizing: border-box;
             margin: 0;
@@ -274,7 +274,7 @@
         }
 
         /*-- note end --*/
-    </style> -->
+    </style>
 </head>
 <body>
     <section class="note body-color" name="note">
@@ -287,7 +287,7 @@
                         target="_blank" ga_eventname="Eweb_Eventpage_SP_15303"
                         ga_eventlabel="Eweb_Eventpage_SP_15303_159" ga_eventnum="0" ga_eventpictxt="pro"
                         ga_eventaction="https://www.etmall.com.tw/Activity/Reg/1112">點我登記</a></p><!-- 最多8字，超過會破版 -->
-
+                
                 <ol class="decimal-type">
                     <li>活動名稱：美妝館夏日美膜女-指定品滿$2000登記雙重抽(限量名額)</li>
                     <li>活動期間：2022/07/01 AM 10:00~2022/07/15 AM 10:00</li>
@@ -383,13 +383,23 @@
     </section>
     <script>
         
-        let tagElement = document.querySelectorAll('h2');
-        console.log(tagElement);
-        let liElement = document.getElementsByTagName('li');
-        console.log(liElement);
+        let tags = document.querySelectorAll('h2'); //<---因為我用了塑膠袋包東西的方法，所以儘管只有一個，也還是要使用"[]"的方法，來取得裡面的東西
+        console.log(tags);
+        let lists = document.getElementsByTagName('li');
+        console.log(lists);
         
-        tagElement.style.backgroundColor = '#0fa';
-        liElement.style.backgroundColor = '#0f0';
+        for (let i = 0; i < tags.length; i++) { 
+            tags[i].style.backgroundColor = '#0fa';
+            console.log('進行到第' + (i+1) + '個') //在給使用者看到的地方，都要讓數值變成一般可以閱讀的的方式，因為現實中「0」對大眾來說是沒有的，但在程式中是第一個
+        }
+
+        for (let i = 0;i < lists.length; i++) {
+            lists[i].style.backgroundColor = '#0f0';
+        }
+
+        // tags.style.backgroundColor = '#0fa'; <--- 若直接寫「tags」，就是指對整個集合(裝有一袋東西的塑膠袋)上色，而非裡面的元素，所以要取得以面的元素，要在變數名稱後面加上"[]"
+        // lists.style.backgroundColor = '#0f0';
+        // tagElement <---不要命Element，因為在此不是元素，所以在命名的時候要依照該東西做更恰當的命名，在此可以命「tags」，因為在此他就是指塑膠袋(包含裡面的東西)
         
     </script>
 </body>
