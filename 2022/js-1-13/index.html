@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[作業] 1-13</title>
+    <style>
+        .content__box{
+            display: none;
+            margin-left: auto;
+            margin-right: auto;
+            width: 600px;
+            height: 50px;
+            border: 1px solid #000;
+        }
+        .content__box.active{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="content__wrap">
+        <div class="content__box" data-content="早安">區塊1</div>
+        <div class="content__box" data-content="泥好">區塊2</div>
+        <div class="content__box" data-content="認同請分享">區塊3</div>
+    </div>
+    <script>
+        let element = document.getElementsByClassName('content__box');
+        // console.log(element);
+        let elementText1 = document.getElementsByClassName('content__box')[0];
+        // console.log(elementText1)
+        let elementText2 = document.getElementsByClassName('content__box')[1];
+        // console.log(elementText2)
+        let elementText3 = document.getElementsByClassName('content__box')[2];
+        // console.log(elementText3)
+
+        for (i = 0; i < element.length; i++) {
+            // let classNumber = 'text' + (i + 1);
+
+            element[i].classList.add('active');
+            // element[i].classList.add(classNumber);
+
+            let dataContent1 = element[0].dataset.content;
+            // console.log(dataContent1);
+            elementText1.innerText = dataContent1;
+
+            let dataContent2 = element[1].dataset.content;
+            // console.log(dataContent2);
+            elementText2.innerText = dataContent2;
+
+            let dataContent3 = element[2].dataset.content;
+            // console.log(dataContent3);
+            elementText3.innerText = dataContent3;
+
+        }
+        
+    </script>
+</body>
+</html>
