@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3-6</title>
+  <style>
+    html, body {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+
+    .mr-marvel {
+      position: relative;
+      width: 700px;
+      height: 450px;
+      margin: 400px auto 0 auto;
+      background-image: url(mr-marvel.png);
+      background-position: center center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .mr-marvel::after {
+      position: absolute;
+      bottom: 67%;
+      right: 21%;
+      width: 350px;
+      height: 449px;
+      /* ========== 作答區一 Start ========== */
+      /* 提示：填寫必須和 ::after 同時出現的語法  */
+      content: '';
+
+      /* ========== 作答區一 End ========== */
+      background-image: url(arm.png);
+      background-position: center center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      transform-origin: 98% 98%;
+      transform: rotate(0);
+      transition: all .3s ease-in;
+    }
+
+    .mr-marvel:hover::after {
+      height: 540px;
+      transform: rotate(-1.5deg);
+    }
+
+    .flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 40px auto;
+      width: 960px;
+      list-style: none;
+      font-weight: 700;
+    }
+
+    .flex li {
+      padding: 12px 36px;
+      border-radius: 50px;
+    }
+
+    /* ========== 作答區二 Start ========== */
+    /* 提示：使用偽類選擇器改變顏色 */
+    .flex li:first-child {
+      background-color: aquamarine;
+    }
+    
+    /* ========== 作答區二 End ========== */
+  </style>
+</head>
+<body>
+  <div class="mr-marvel"></div>
+    <ul class="flex">
+      <li>Ms. Momo</li>
+      <li>Ms. Mother</li>
+      <li>Ms. Marvel</li>
+      <li>Ms. Moroccanoil</li>
+    </ul>
+</body>
+</html>

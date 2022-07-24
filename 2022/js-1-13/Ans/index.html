@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[解答] 1-13</title>
+    <style>
+        .content__box{
+            display: none;
+            margin-left: auto;
+            margin-right: auto;
+            width: 600px;
+            height: 50px;
+            border: 1px solid #000;
+        }
+        .content__box.active{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="content__wrap">
+        <div class="content__box" data-content="早安">區塊1</div>
+        <div class="content__box" data-content="泥好">區塊2</div>
+        <div class="content__box" data-content="認同請分享">區塊3</div>
+    </div>
+    <script>
+
+        const contents = document.querySelectorAll('.content__box');
+
+        for(let i = 0; i < contents.length; i++) {
+            contents[i].classList.add('active');
+            contents[i].innerHTML = contents[i].dataset.content;
+        }
+
+
+
+    </script>
+</body>
+</html>
