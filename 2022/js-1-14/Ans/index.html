@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>猜數字遊戲</title>
+
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+
+      body {
+        width: 50%;
+        max-width: 800px;
+        min-width: 480px;
+        margin: 0 auto;
+      }
+
+      .last__result {
+        color: white;
+        padding: 3px;
+      }
+
+      .btn--reset {
+        display: none;
+      }
+
+      .btn--reset.active {
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>猜數字遊戲</h1>
+
+    <p>程式在1到100間挑了一個雖機的數字，請在10次機會中猜出來！猜錯的話會提示要大一點還是小一點。</p>
+
+    <div class="form">
+      <label for="guessField">輸入數字: </label>
+      <input type="number" id="guessField">
+      <input type="submit" value="就猜是你！" id="guessSubmit">
+    </div>
+
+    <div id="resultParas">
+      <p id="guesses"></p>
+      <p id="lastResult" class="last__result"></p>
+      <p id="lowOrHi"></p>
+    </div>
+    <button id="resetButton" class="btn--reset">再來一場</button>
+    <script>
+      // 作業作答區
+      let randomNumber = Math.floor(Math.random() * 100) + 1;
+      console.log(randomNumber);
+
+      const guesses = document.querySelector('#guesses');
+      const lastResult = document.querySelector('#lastResult');
+      const lowOrHi = document.querySelector('#lowOrHi');
+
+      const guessSubmit = document.querySelector('#guessSubmit');
+      const guessField = document.querySelector('#guessField');
+      const resetButton = document.querySelector('#resetButton');
+
+      let guessCount = 1;
+
+      guessField.focus();
+      guessSubmit.addEventListener('click', checkGuess);
+
+      function checkGuess() {
+        let userGuess = guessField.value*1;
+        if (guessCount === 1) {
+          guesses.innerText = '你猜過: ' + userGuess;
+        } else{
+          guesses.innerText += '、' + userGuess;
+        }
+
+        if (userGuess === randomNumber) {
+          lastResult.innerText = '恭喜！你居然猜到了！';
+          lastResult.style.backgroundColor = 'green';
+          lowOrHi.innerText = '';
+          setGameOver();
+        } else if (guessCount === 10) {
+          lastResult.innerText = '勝敗乃兵家常事，大俠請重新來過';
+          lastResult.style.backgroundColor = 'black';
+          lastResult.style.color = 'white';
+          setGameOver();
+        } else {
+          lastResult.innerText = '錯了內～';
+          lastResult.style.backgroundColor = 'red';
+          if(userGuess < randomNumber) {
+            lowOrHi.innerText = '猜太低囉!';
+          } else if(userGuess > randomNumber) {
+            lowOrHi.innerText = '猜太高了吧!';
+          }
+        }
+
+        guessCount++;
+        guessField.value = '';
+        guessField.focus();
+      }
+
+      
+      function setGameOver() {
+        guessField.disabled = true;
+        guessSubmit.disabled = true;
+        const resetButton = document.querySelector('#resetButton');
+        resetButton.classList.add('active');
+        resetButton.addEventListener('click', resetGame);
+      }
+
+      function resetGame() {
+        guessCount = 1;
+
+        var resetParas = document.querySelectorAll('#resultParas p');
+        for (var i = 0 ; i < resetParas.length ; i++) {
+          resetParas[i].innerText = '';
+        }
+
+        resetButton.classList.remove('active');
+
+        guessField.disabled = false;
+        guessSubmit.disabled = false;
+        guessField.value = '';
+        guessField.focus();
+
+        lastResult.style.backgroundColor = 'white';
+
+        randomNumber = Math.floor(Math.random() * 100) + 1;
+      }
+    </script>
+  </body>
+</html>

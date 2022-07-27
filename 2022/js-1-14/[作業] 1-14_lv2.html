@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>猜數字遊戲</title>
+
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+
+      body {
+        width: 50%;
+        max-width: 800px;
+        min-width: 480px;
+        margin: 0 auto;
+      }
+
+      .last__result {
+        color: white;
+        padding: 3px;
+      }
+
+      .btn--reset {
+        display: none;
+      }
+
+      .btn--reset.active {
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>猜數字遊戲</h1>
+
+    <p>程式在1到100間挑了一個雖機的數字，請在10次機會中猜出來！猜錯的話會提示要大一點還是小一點。</p>
+
+    <div class="form">
+      <label for="guessField">輸入數字: </label>
+      <input type="number" id="guessField">
+      <input type="submit" value="就猜是你！" id="guessSubmit">
+    </div>
+
+    <div id="resultParas">
+      <p id="guesses"></p>
+      <p id="lastResult" class="last__result"></p>
+      <p id="lowOrHi"></p>
+    </div>
+    <button id="resetButton" class="btn--reset">再來一場</button>
+    <script>
+      // 作業作答區 
+      // 產生隨機數  
+      let randomNumber = Math.floor(Math.random() * 100) + 1;
+
+      const guessSubmit = document.querySelector('#guessSubmit');
+      guessSubmit.addEventListener('click', checkGuess);
+
+
+    </script>
+  </body>
+</html>
